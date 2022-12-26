@@ -14,10 +14,6 @@ inputs:
     description: "32bit/64bit Version of LabVIEW Used"
     required: false
     default: "x86"
-  PackageName:
-    description: "PackageName"
-    required: false
-    default: ""    
   NEVSTOP-FTP-IP:
     description: "ip of FTP"
     required: false
@@ -29,10 +25,14 @@ inputs:
   NEVSTOP-FTP-USER:
     description: "USER of FTP"
     required: false
-    default: ""
+    default: "anonymous"
   NEVSTOP-FTP-PASSWORDS:
     description: "PASSWORDS of FTP"
-    required: false
+    required: true
+    default: "anonymous"
+  PackageName:
+    description: "PackageName"
+    required: true
     default: ""
 
 
