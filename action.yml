@@ -1,6 +1,6 @@
-name: "vipm-OpenVIPM"
+name: "InstallNevstopPackage"
 author: "NEVSTOP"
-description: "CICD Action for opening VIPM"
+description: "CICD Action for installing package from nevstop-lab"
 branding:
   icon: "anchor"
   color: "green"
@@ -14,16 +14,27 @@ inputs:
     description: "32bit/64bit Version of LabVIEW Used"
     required: false
     default: "x86"
+  PackageName:
+    description: "PackageName"
+    required: true
+    default: ""    
 
 runs:
   using: "composite"
 
   steps:
-    - id: build-vip
-      uses: LV-APT/lvCICD@main
+    - id: download-package
+      uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
       with:
         LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
         Architecture: ${{ inputs.Architecture }}
-        Operation: vipm_OpenVIPM
+        NEVSTOP-FTP-IP: ${{ secrets.VIPM_FTP_IP }}
+        NEVSTOP-FTP-PORT: ${{ secrets.VIPM_FTP_PORT }}
+        NEVSTOP-FTP-USER: ${{ secrets.VIPM_FTP_USER }}
+        NEVSTOP-FTP-PASSWORDS: ${{ secrets.VIPM_FTP_PASSWORD }}
+        PackageName: ${{ inputs.PackageName }}
 
-
+    - uses: NEVSTOP-LAB/vipm-InstallPackage@main
+      with:
+        LabVIEW_Version: 2017
+        Package: ${{steps.download-package.outputs.vipPathName}}
