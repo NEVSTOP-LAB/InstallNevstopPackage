@@ -16,8 +16,25 @@ inputs:
     default: "x86"
   PackageName:
     description: "PackageName"
-    required: true
+    required: false
     default: ""    
+  NEVSTOP-FTP-IP:
+    description: "ip of FTP"
+    required: false
+    default: ""
+  NEVSTOP-FTP-PORT:
+    description: "PORT of FTP"
+    required: false
+    default: ""
+  NEVSTOP-FTP-USER:
+    description: "USER of FTP"
+    required: false
+    default: ""
+  NEVSTOP-FTP-PASSWORDS:
+    description: "PASSWORDS of FTP"
+    required: false
+    default: ""
+
 
 runs:
   using: "composite"
@@ -28,10 +45,10 @@ runs:
       with:
         LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
         Architecture: ${{ inputs.Architecture }}
-        NEVSTOP-FTP-IP: ${{ secrets.VIPM_FTP_IP }}
-        NEVSTOP-FTP-PORT: ${{ secrets.VIPM_FTP_PORT }}
-        NEVSTOP-FTP-USER: ${{ secrets.VIPM_FTP_USER }}
-        NEVSTOP-FTP-PASSWORDS: ${{ secrets.VIPM_FTP_PASSWORD }}
+        NEVSTOP-FTP-IP: ${{ inputs.NEVSTOP-FTP-IP }}
+        NEVSTOP-FTP-PORT: ${{ inputs.NEVSTOP-FTP-PORT }}
+        NEVSTOP-FTP-USER: ${{ inputs.NEVSTOP-FTP-USER }}
+        NEVSTOP-FTP-PASSWORDS: ${{ inputs.NEVSTOP-FTP-PASSWORDS }}
         PackageName: ${{ inputs.PackageName }}
 
     - uses: NEVSTOP-LAB/vipm-InstallPackage@main
