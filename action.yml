@@ -1,0 +1,29 @@
+name: "vipm-OpenVIPM"
+author: "NEVSTOP"
+description: "CICD Action for opening VIPM"
+branding:
+  icon: "anchor"
+  color: "green"
+
+inputs:
+  LabVIEW_Version:
+    description: "LabVIEW Version Used"
+    required: false
+    default: "2019"
+  Architecture:
+    description: "32bit/64bit Version of LabVIEW Used"
+    required: false
+    default: "x86"
+
+runs:
+  using: "composite"
+
+  steps:
+    - id: build-vip
+      uses: LV-APT/lvCICD@main
+      with:
+        LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
+        Architecture: ${{ inputs.Architecture }}
+        Operation: vipm_OpenVIPM
+
+
