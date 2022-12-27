@@ -88,7 +88,7 @@ runs:
         PackageName: ${{ inputs.PackageName }}
 
     - id: download-package1
-      if: ${{ inputs.PackageName1 }} != ""
+      if: ${{ inputs.PackageName1 }}
       uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
       with:
         LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
@@ -100,7 +100,7 @@ runs:
         PackageName: ${{ inputs.PackageName1 }}
 
     - id: download-package2
-      if: ${{ inputs.PackageName2 }} != ""
+      if: ${{ inputs.PackageName2 }}
       uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
       with:
         LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
@@ -112,7 +112,7 @@ runs:
         PackageName: ${{ inputs.PackageName2 }}
 
     - id: download-package3
-      if: ${{ inputs.PackageName3 }} != ""
+      if: ${{ inputs.PackageName3 }}
       uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
       with:
         LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
@@ -124,7 +124,7 @@ runs:
         PackageName: ${{ inputs.PackageName3 }}
 
     - id: download-package4
-      if: ${{ inputs.PackageName4 }} != ""
+      if: ${{ inputs.PackageName4 }}
       uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
       with:
         LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
@@ -136,7 +136,7 @@ runs:
         PackageName: ${{ inputs.PackageName4 }}
 
     - id: download-package5
-      if: ${{ inputs.PackageName5 }} != ""
+      if: ${{ inputs.PackageName5 }}
       uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
       with:
         LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
@@ -148,7 +148,7 @@ runs:
         PackageName: ${{ inputs.PackageName5 }}
 
     - id: download-package6
-      if: ${{ inputs.PackageName6 }} != ""
+      if: ${{ inputs.PackageName6 }}
       uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
       with:
         LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
@@ -160,7 +160,7 @@ runs:
         PackageName: ${{ inputs.PackageName6 }}
 
     - id: download-package7
-      if: ${{ inputs.PackageName7 }} != ""
+      if: ${{ inputs.PackageName7 }}
       uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
       with:
         LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
@@ -172,7 +172,7 @@ runs:
         PackageName: ${{ inputs.PackageName7 }}
 
     - id: download-package8
-      if: ${{ inputs.PackageName8 }} != ""
+      if: ${{ inputs.PackageName8 }}
       uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
       with:
         LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
@@ -184,7 +184,7 @@ runs:
         PackageName: ${{ inputs.PackageName8 }}
 
     - id: download-package9
-      if: ${{ inputs.PackageName9 }} != ""
+      if: ${{ inputs.PackageName9 }}
       uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
       with:
         LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
