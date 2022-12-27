@@ -34,6 +34,42 @@ inputs:
     description: "PackageName"
     required: true
     default: ""
+  PackageName1:
+    description: "PackageName"
+    required: false
+    default: ""
+  PackageName2:
+    description: "PackageName"
+    required: false
+    default: ""
+  PackageName3:
+    description: "PackageName"
+    required: false
+    default: ""
+  PackageName4:
+    description: "PackageName"
+    required: false
+    default: ""
+  PackageName5:
+    description: "PackageName"
+    required: false
+    default: ""
+  PackageName6:
+    description: "PackageName"
+    required: false
+    default: ""
+  PackageName7:
+    description: "PackageName"
+    required: false
+    default: ""
+  PackageName8:
+    description: "PackageName"
+    required: false
+    default: ""
+  PackageName9:
+    description: "PackageName"
+    required: false
+    default: ""
 
 
 runs:
@@ -51,7 +87,124 @@ runs:
         NEVSTOP-FTP-PASSWORDS: ${{ inputs.NEVSTOP-FTP-PASSWORDS }}
         PackageName: ${{ inputs.PackageName }}
 
+    - id: download-package1
+      if: ${{ inputs.PackageName1 }} != ""
+      uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
+      with:
+        LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
+        Architecture: ${{ inputs.Architecture }}
+        NEVSTOP-FTP-IP: ${{ inputs.NEVSTOP-FTP-IP }}
+        NEVSTOP-FTP-PORT: ${{ inputs.NEVSTOP-FTP-PORT }}
+        NEVSTOP-FTP-USER: ${{ inputs.NEVSTOP-FTP-USER }}
+        NEVSTOP-FTP-PASSWORDS: ${{ inputs.NEVSTOP-FTP-PASSWORDS }}
+        PackageName: ${{ inputs.PackageName1 }}
+
+    - id: download-package2
+      if: ${{ inputs.PackageName2 }} != ""
+      uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
+      with:
+        LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
+        Architecture: ${{ inputs.Architecture }}
+        NEVSTOP-FTP-IP: ${{ inputs.NEVSTOP-FTP-IP }}
+        NEVSTOP-FTP-PORT: ${{ inputs.NEVSTOP-FTP-PORT }}
+        NEVSTOP-FTP-USER: ${{ inputs.NEVSTOP-FTP-USER }}
+        NEVSTOP-FTP-PASSWORDS: ${{ inputs.NEVSTOP-FTP-PASSWORDS }}
+        PackageName: ${{ inputs.PackageName2 }}
+
+    - id: download-package3
+      if: ${{ inputs.PackageName3 }} != ""
+      uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
+      with:
+        LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
+        Architecture: ${{ inputs.Architecture }}
+        NEVSTOP-FTP-IP: ${{ inputs.NEVSTOP-FTP-IP }}
+        NEVSTOP-FTP-PORT: ${{ inputs.NEVSTOP-FTP-PORT }}
+        NEVSTOP-FTP-USER: ${{ inputs.NEVSTOP-FTP-USER }}
+        NEVSTOP-FTP-PASSWORDS: ${{ inputs.NEVSTOP-FTP-PASSWORDS }}
+        PackageName: ${{ inputs.PackageName3 }}
+
+    - id: download-package4
+      if: ${{ inputs.PackageName4 }} != ""
+      uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
+      with:
+        LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
+        Architecture: ${{ inputs.Architecture }}
+        NEVSTOP-FTP-IP: ${{ inputs.NEVSTOP-FTP-IP }}
+        NEVSTOP-FTP-PORT: ${{ inputs.NEVSTOP-FTP-PORT }}
+        NEVSTOP-FTP-USER: ${{ inputs.NEVSTOP-FTP-USER }}
+        NEVSTOP-FTP-PASSWORDS: ${{ inputs.NEVSTOP-FTP-PASSWORDS }}
+        PackageName: ${{ inputs.PackageName4 }}
+
+    - id: download-package5
+      if: ${{ inputs.PackageName5 }} != ""
+      uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
+      with:
+        LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
+        Architecture: ${{ inputs.Architecture }}
+        NEVSTOP-FTP-IP: ${{ inputs.NEVSTOP-FTP-IP }}
+        NEVSTOP-FTP-PORT: ${{ inputs.NEVSTOP-FTP-PORT }}
+        NEVSTOP-FTP-USER: ${{ inputs.NEVSTOP-FTP-USER }}
+        NEVSTOP-FTP-PASSWORDS: ${{ inputs.NEVSTOP-FTP-PASSWORDS }}
+        PackageName: ${{ inputs.PackageName5 }}
+
+    - id: download-package6
+      if: ${{ inputs.PackageName6 }} != ""
+      uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
+      with:
+        LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
+        Architecture: ${{ inputs.Architecture }}
+        NEVSTOP-FTP-IP: ${{ inputs.NEVSTOP-FTP-IP }}
+        NEVSTOP-FTP-PORT: ${{ inputs.NEVSTOP-FTP-PORT }}
+        NEVSTOP-FTP-USER: ${{ inputs.NEVSTOP-FTP-USER }}
+        NEVSTOP-FTP-PASSWORDS: ${{ inputs.NEVSTOP-FTP-PASSWORDS }}
+        PackageName: ${{ inputs.PackageName6 }}
+
+    - id: download-package7
+      if: ${{ inputs.PackageName7 }} != ""
+      uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
+      with:
+        LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
+        Architecture: ${{ inputs.Architecture }}
+        NEVSTOP-FTP-IP: ${{ inputs.NEVSTOP-FTP-IP }}
+        NEVSTOP-FTP-PORT: ${{ inputs.NEVSTOP-FTP-PORT }}
+        NEVSTOP-FTP-USER: ${{ inputs.NEVSTOP-FTP-USER }}
+        NEVSTOP-FTP-PASSWORDS: ${{ inputs.NEVSTOP-FTP-PASSWORDS }}
+        PackageName: ${{ inputs.PackageName7 }}
+
+    - id: download-package8
+      if: ${{ inputs.PackageName8 }} != ""
+      uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
+      with:
+        LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
+        Architecture: ${{ inputs.Architecture }}
+        NEVSTOP-FTP-IP: ${{ inputs.NEVSTOP-FTP-IP }}
+        NEVSTOP-FTP-PORT: ${{ inputs.NEVSTOP-FTP-PORT }}
+        NEVSTOP-FTP-USER: ${{ inputs.NEVSTOP-FTP-USER }}
+        NEVSTOP-FTP-PASSWORDS: ${{ inputs.NEVSTOP-FTP-PASSWORDS }}
+        PackageName: ${{ inputs.PackageName8 }}
+
+    - id: download-package9
+      if: ${{ inputs.PackageName9 }} != ""
+      uses: NEVSTOP-LAB/DownloadPackageFromNevstopFTP@main
+      with:
+        LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
+        Architecture: ${{ inputs.Architecture }}
+        NEVSTOP-FTP-IP: ${{ inputs.NEVSTOP-FTP-IP }}
+        NEVSTOP-FTP-PORT: ${{ inputs.NEVSTOP-FTP-PORT }}
+        NEVSTOP-FTP-USER: ${{ inputs.NEVSTOP-FTP-USER }}
+        NEVSTOP-FTP-PASSWORDS: ${{ inputs.NEVSTOP-FTP-PASSWORDS }}
+        PackageName: ${{ inputs.PackageName9 }}
+
     - uses: NEVSTOP-LAB/vipm-InstallPackage@main
       with:
         LabVIEW_Version: 2017
         Package: ${{steps.download-package.outputs.vipPathName}}
+        Package1: ${{steps.download-package1.outputs.vipPathName}}
+        Package2: ${{steps.download-package2.outputs.vipPathName}}
+        Package3: ${{steps.download-package3.outputs.vipPathName}}
+        Package4: ${{steps.download-package4.outputs.vipPathName}}
+        Package5: ${{steps.download-package5.outputs.vipPathName}}
+        Package6: ${{steps.download-package6.outputs.vipPathName}}
+        Package7: ${{steps.download-package7.outputs.vipPathName}}
+        Package8: ${{steps.download-package8.outputs.vipPathName}}
+        Package9: ${{steps.download-package9.outputs.vipPathName}}
