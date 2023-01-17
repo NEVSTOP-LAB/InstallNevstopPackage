@@ -197,7 +197,7 @@ runs:
 
     - uses: NEVSTOP-LAB/vipm-InstallPackage@main
       with:
-        LabVIEW_Version: 2017
+        LabVIEW_Version: ${{ inputs.LabVIEW_Version }}
         Package: ${{steps.download-package.outputs.vipPathName}}
         Package1: ${{steps.download-package1.outputs.vipPathName}}
         Package2: ${{steps.download-package2.outputs.vipPathName}}
